@@ -1,2 +1,25 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+     import Title from '$lib/title.svelte';
+let title = "Weather";
+
+const updateTitle = ()=> {
+    title = "Weather2";
+}
+</script>
+
+
+
+<Title />
+<h1>about post</h1>
+<div class="index">
+    <h1>{title}</h1>
+    <button on:click={updateTitle}>chante title</button>
+    <input type="text" bind:value={title}>
+</div>
+
+
+<style>
+
+
+
+</style>
